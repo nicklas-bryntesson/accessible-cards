@@ -1,0 +1,12 @@
+.site-header {
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  background-color: var(--color-full-black);
+  color: var(--color-full-white);
+
+  & p {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: var(--font-heading);
+  }
+}

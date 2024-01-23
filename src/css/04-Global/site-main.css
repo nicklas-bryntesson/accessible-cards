@@ -1,0 +1,5 @@
+.site-main {
+  display: grid;
+  place-items: center;
+  padding-block: 4rem;
+}

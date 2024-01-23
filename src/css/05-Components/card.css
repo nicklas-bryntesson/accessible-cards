@@ -1,0 +1,53 @@
+.card {
+  --_card-box-shadow: 1px 1.7px 2.2px rgba(0, 0, 0, 0.021),
+    2.4px 4.1px 5.3px rgba(0, 0, 0, 0.023),
+    4.5px 7.8px 10px rgba(0, 0, 0, 0.023),
+    8px 13.8px 17.9px rgba(0, 0, 0, 0.024),
+    15px 25.9px 33.4px rgba(0, 0, 0, 0.031), 36px 62px 80px rgba(0, 0, 0, 0.07);
+
+  max-width: 36rem;
+  margin-inline: auto;
+  background-color: var(--color-full-white);
+  box-shadow: var(--_card-box-shadow);
+  border-radius: 0.75rem;
+  overflow: hidden;
+
+  & .image {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 50% 100%, 0 90%);
+
+    & img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & .content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    & h2 {
+      margin-block-end: 0.5rem;
+      margin-block-start: 0;
+      font-size: clamp(1.5rem, 1.314rem + 0.78vw, 2rem);
+      font-weight: 700;
+      color: fuchsia;
+    }
+
+    & small {
+      font-family: var(--font-heading);
+      font-weight: 700;
+    }
+
+    & p {
+      font-size: clamp(1rem, 0.953rem + 0.2vw, 1.125rem);
+      margin-block-end: 1rem;
+    }
+  }
+}
